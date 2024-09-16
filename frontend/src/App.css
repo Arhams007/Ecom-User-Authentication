@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+.gg{
+  background: rgba(255,255,255,0.15);
+  -webkit-backdrop-filter: blur(42px);
+  backdrop-filter: blur(42px);
+  border: 1px solid rgba(255,255,255,0.075);
+}
+.kk {
+  background: rgba(255,255,255,0.5);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* hambarger css */
+
+/* From Uiverse.io by JulanDeAlb */ 
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 2em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* spinner */
+
+/* From Uiverse.io by bociKond */ 
+.spinner {
+  width: 70.4px;
+  height: 70.4px;
+  --clr: rgb(247, 197, 159);
+  --clr-alpha: rgb(247, 197, 159,.1);
+  animation: spinner 1.6s infinite ease;
+  transform-style: preserve-3d;
+}
+
+.spinner > div {
+  background-color: var(--clr-alpha);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border: 3.5px solid ;
+}
+
+.spinner div:nth-of-type(1) {
+  transform: translateZ(-35.2px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+  transform: translateZ(35.2px);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+  }
+
+  50% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+  }
+
+  100% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
+}
+
+
+
